@@ -93,7 +93,7 @@ I made the assumption that the location attributes are always the same, and buil
 
 There is some relic code for putting the locations into SwiftData with the hope of feeding the views from there, but I ran into some issues with threading. I felt that learning threading in Swift was beyond the scope of this exercise (what happened to Grand Central Dispatch?) so I stored them in memory.
 
-SwiftUI has many analogues with React and I designed in a way that is idiomatic to React, it may not be idiomatic Swift code. The styling system seems oddly cumbersome. 
+SwiftUI has many analogues with React and I designed in a way that is idiomatic to React, it may not be idiomatic Swift code. The styling system seems oddly cumbersome. Same goes for Jetpack Compose.
 
 The Android project desperately needs some animations to feel right, but there isn't anything quite as convenient as `withAnimation` and the basic animation framework doesn't play well with the map markers apparently. 
 
