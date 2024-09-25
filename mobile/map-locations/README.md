@@ -80,7 +80,9 @@ Do not edit any lines above this line break.
 
 ## Getting Started
 
-Open the project in Xcode and run it on an iOS simulator. I did not test it on a physical device.
+Open the iOS project in Xcode and run it on an iOS simulator. I did not test it on a physical device.
+
+Open the Android project in Android Studio. You'll need to add a `secrets.properties` file use the format of and at the same level as `local.defaults.properties`. It should contain your Google Maps API key. There isn't a way to use Google Maps without this key now, so I included it despite the instructions to the contrary. You should be able to build and run the project on an emulator from there. 
 
 
 ## Implementation
@@ -93,5 +95,7 @@ There is some relic code for putting the locations into SwiftData with the hope 
 
 SwiftUI has many analogues with React and I designed in a way that is idiomatic to React, it may not be idiomatic Swift code. The styling system seems oddly cumbersome. 
 
-Claude was very useful in this exercise. To a point. 
+The Android project desperately needs some animations to feel right, but there isn't anything quite as convenient as `withAnimation` and the basic animation framework doesn't play well with the map markers apparently. 
+
+Claude and Copilot were very useful in this exercise. To a point. 
 
