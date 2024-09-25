@@ -80,10 +80,18 @@ Do not edit any lines above this line break.
 
 ## Getting Started
 
-Fill out with necessary information and remove this line.
-
+Open the project in Xcode and run it on an iOS simulator. I did not test it on a physical device.
 
 
 ## Implementation
 
-Fill out with necessary information and remove this line.
+I'm not sure what is meant by "efficiently" filtering the locations by their type - the number of locations and types does not appear to be large so it probably isn't worth bothering with anything complicated. 
+
+I made the assumption that the location attributes are always the same, and built that into the data model, but that isn't guaranteed by the data's apparent schema. 
+
+There is some relic code for putting the locations into SwiftData with the hope of feeding the views from there, but I ran into some issues with threading. I felt that learning threading in Swift was beyond the scope of this exercise (what happened to Grand Central Dispatch?) so I stored them in memory.
+
+SwiftUI has many analogues with React and I designed in a way that is idiomatic to React, it may not be idiomatic Swift code. The styling system seems oddly cumbersome. 
+
+Claude was very useful in this exercise. To a point. 
+
