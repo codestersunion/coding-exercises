@@ -29,7 +29,7 @@ struct ContentView: View {
             Map {
                 ForEach(filteredLocations) { location in
                     Annotation("", coordinate: location.coordinates()) {
-                        MarkerView(location: location).onTapGesture {
+                        MarkerView(location: location, selected: selectedLocation?.id == location.id).onTapGesture {
                             withAnimation {
                                 selectedLocation = location
                             }
@@ -131,11 +131,17 @@ struct ContentView: View {
 
 struct MarkerView: View {
     public var location: Location
+    public var selected: Bool
+    
+    init(location: Location, selected: Bool = false) {
+        self.location = location
+        self.selected = selected
+    }
     
     var body: some View {
         Image(systemName: "mappin.circle.fill")
             .font(.title)
-            .foregroundColor(.red)
+            .foregroundColor(selected ? Color.red : Color.blue)
     }
 }
 
